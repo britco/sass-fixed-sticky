@@ -45,6 +45,7 @@ $included-once: false;
 				-webkit-animation-name: sass-fixed-sticky-animation;
 			}
 		} @else {
+			// Add the position like normal
 			position: $args;
 		}
 	}
