@@ -1,0 +1,16 @@
+{
+  "name": "sass-fixed-sticky",
+  "version": "0.0.1",
+  "authors": [
+    "Paul Dufour <paul@brit.co>"
+  ],
+  "main": "sass-fixed-sticky.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
