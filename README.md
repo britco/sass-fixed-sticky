@@ -27,11 +27,21 @@ And then include the JS file: [dist/sass-fixed-sticky.js](./dist/sass-fixed-stic
 
 Then you're done, all the elements you applied the mixin to will have a 'sticky' position. You don't need to need any further Javascript.
 
+For a complete example see the [demo file](./test/demo.html). Just make to see the [#development](#development) section first.
+
+## Development
+
+````
+bower install
+npm install
+gulp watch
+````
+
+
 ## Links
 * https://github.com/filamentgroup/fixed-sticky
 * http://updates.html5rocks.com/2012/08/Stick-your-landings-position-sticky-lands-in-WebKit
 
-Also see the [demo file](./test/demo.html)
 
 ## License
 Available under the [MIT License](LICENSE.md).
