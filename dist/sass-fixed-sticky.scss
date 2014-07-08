@@ -1,9 +1,3 @@
-/*
- * Position mixin. Only does the non-default action when the position is
- * `sticky`.
- */
-
-
 // Only include once
 $included-once: false;
 
@@ -40,13 +34,16 @@ $included-once: false;
 		}
 	}
 
-	@mixin position($position) {
-		& {
-			animation-duration: 0.001s;
-			animation-name: sass-fixed-sticky-animation;
-			-webkit-animation-duration: 0.001s;
-			-webkit-animation-name: sass-fixed-sticky-animation;
+	@mixin position($args...) {
+		@if (nth($args, 1) == 'sticky') {
+			& {
+				animation-duration: 0.001s;
+				animation-name: sass-fixed-sticky-animation;
+				-webkit-animation-duration: 0.001s;
+				-webkit-animation-name: sass-fixed-sticky-animation;
+			}
+		} @else {
+			position: $args;
 		}
 	}
-
 }
