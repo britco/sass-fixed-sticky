@@ -3,39 +3,50 @@
  * `sticky`.
  */
 
-@mixin keyframes($name) {
-  @-webkit-keyframes #{$name} {
-    @content;
-  }
 
-  @-moz-keyframes #{$name} {
-    @content;
-  }
+// Only include once
+$included-once: false;
 
-  @-ms-keyframes #{$name} {
-    @content;
-  }
+@if ($included-once == false) {
+	$included-once: true;
 
-  @keyframes #{$name} {
-    @content;
-  }
-}
+	@import "./fixedsticky.scss";
 
-@include keyframes(sass-fixed-sticky-animation) {
-	from {
-	 counter-reset: "";
+	@mixin keyframes($name) {
+	  @-webkit-keyframes #{$name} {
+	    @content;
+	  }
+
+	  @-moz-keyframes #{$name} {
+	    @content;
+	  }
+
+	  @-ms-keyframes #{$name} {
+	    @content;
+	  }
+
+	  @keyframes #{$name} {
+	    @content;
+	  }
 	}
 
-	to {
-	 counter-reset: "";
-	}
-}
+	@include keyframes(sass-fixed-sticky-animation) {
+		from {
+		 counter-reset: "";
+		}
 
-@mixin position($position) {
-	& {
-		animation-duration: 0.001s;
-		animation-name: sass-fixed-sticky-animation;
-		-webkit-animation-duration: 0.001s;
-		-webkit-animation-name: sass-fixed-sticky-animation;
+		to {
+		 counter-reset: "";
+		}
 	}
+
+	@mixin position($position) {
+		& {
+			animation-duration: 0.001s;
+			animation-name: sass-fixed-sticky-animation;
+			-webkit-animation-duration: 0.001s;
+			-webkit-animation-name: sass-fixed-sticky-animation;
+		}
+	}
+
 }
