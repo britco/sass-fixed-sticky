@@ -9,7 +9,6 @@ SASS library for making interaction with https://github.com/filamentgroup/fixed-
 bower install sass-fixed-sicky
 ````
 
-
 In your .scss (or .sass) file:
 ````
 @import "sass-fixed-sticky";
@@ -22,6 +21,10 @@ In your .scss (or .sass) file:
 ````
 
 And then include the JS file: [dist/sass-fixed-sticky.js](./dist/sass-fixed-sticky.js)
+
+````
+<script src="sass-fixed-sticky/dist/sass-fixed-sticky.js"></script>
+````
 
 Then you're done, all the elements you applied the mixin to will have a 'sticky' position. You don't need to need any further Javascript.
 
