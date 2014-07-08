@@ -1,7 +1,7 @@
 sass-fixed-sicky
 ================
 
-SASS library for making interaction with https://github.com/filamentgroup/fixed-sticky easier.
+SASS library for making elements position sticky based on top of https://github.com/filamentgroup/fixed-sticky.
 
 ## Installation
 ````
