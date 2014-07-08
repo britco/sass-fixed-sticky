@@ -30,6 +30,7 @@
     "gulp-replace": "~0.4.0",
     "js-beautify": "~1.5.1",
     "gulp-rename": "~1.2.0",
-    "gulp-ext-replace": "~0.1.0"
+    "gulp-ext-replace": "~0.1.0",
+    "run-sequence": "~0.3.6"
   }
 }
