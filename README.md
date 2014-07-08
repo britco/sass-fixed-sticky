@@ -2,7 +2,6 @@ sass-fixed-sicky
 ================
 
 SASS library for making interaction with https://github.com/filamentgroup/fixed-sticky easier.
-
 ## Installation
 ````
 bower install sass-fixed-sicky
