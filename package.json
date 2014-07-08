@@ -1,6 +1,6 @@
 {
   "name": "sass-fixed-sticky",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "sass-fixed-sicky",
   "main": "src/sass-fixed-sicky.js",
   "directories": {
