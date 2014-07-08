@@ -27,7 +27,7 @@ And then include the JS file: [dist/sass-fixed-sticky.js](./dist/sass-fixed-stic
 
 Then you're done, all the elements you applied the mixin to will have a 'sticky' position. You don't need to add any Jvaascript in your `<head>`.
 
-For a complete example see the [demo file](./test/demo.html). Just make to see the [#development](#development) section first.
+For a complete example see the [demo file](./test/demo.html). Just make to see the [#development](#user-content-development) section first.
 
 ## Development
 
