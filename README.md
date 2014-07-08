@@ -6,7 +6,7 @@ SASS library for making interaction with https://github.com/filamentgroup/fixed-
 ## How to use
 
 
-Also see the [demo folder](./demo)
+Also see the [demo folder](./test/demo.html)
 
 ## License
 Available under the [MIT License](LICENSE.md).
