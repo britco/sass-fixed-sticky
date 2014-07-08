@@ -4,8 +4,11 @@
   "authors": [
     "Paul Dufour <paul@brit.co>"
   ],
-  "main": "sass-fixed-sticky.js",
+  "main": ["dist/sass-fixed-sticky.js", "dist/sass-fixed-sticky.scss"],
   "license": "MIT",
+  "dependencies": {
+    "filament-sticky": ">=0.1.3"
+  },
   "ignore": [
     "**/.*",
     "node_modules",

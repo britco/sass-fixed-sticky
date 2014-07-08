@@ -1,0 +1,30 @@
+{
+  "name": "sass-fixed-sticky",
+  "version": "0.0.1",
+  "description": "sass-fixed-sicky",
+  "main": "src/sass-fixed-sicky.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/britco/sass-fixed-sicky.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/britco/sass-fixed-sicky/issues"
+  },
+  "homepage": "https://github.com/britco/sass-fixed-sicky",
+  "devDependencies": {
+    "gulp": "~3.8.5",
+    "sass": "~0.5.0",
+    "coffee-script": "~1.7.1",
+    "gulp-util": "~2.2.19",
+    "gulp-coffee": "~2.0.1",
+    "gulp-sass": "~0.7.2"
+  }
+}
