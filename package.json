@@ -49,6 +49,7 @@
     "vinyl-source-stream": "~0.1.1",
     "gulp-footer": "~1.0.5",
     "browserify-shim": "~3.6.0",
-    "gulp-gh-pages": "~0.3.3"
+    "gulp-gh-pages": "~0.3.3",
+    "gulp-minify-css": "~0.3.6"
   }
 }

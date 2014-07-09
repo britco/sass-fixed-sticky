@@ -11,7 +11,8 @@ extReplace = require('gulp-ext-replace')
 runSequence = require('run-sequence')
 bump = require('gulp-bump')
 footer = require('gulp-footer')
-pages = require("gulp-gh-pages")
+pages = require('gulp-gh-pages')
+minifyCSS = require('gulp-minify-css')
 
 DIR_ROOT = __dirname
 DIR_BUILD = path.join(__dirname,'./dist')
@@ -47,6 +48,7 @@ gulp.task 'styles:demo', (callback) ->
 			path.join(__dirname,'./dist/')
 		]
 	))
+	.pipe(minifyCSS(keepBreaks: true))
 	.pipe(gulp.dest(DIR_DEMO))
 
 gulp.task 'styles', (callback) ->
