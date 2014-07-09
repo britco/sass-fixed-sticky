@@ -31,7 +31,7 @@ For a complete example see [#demos](#demos).
 
 ## Demos
 
-Basic example: [`http://britco.github.io/sass-fixed-sticky/demo/basic.html`](demo/basic.html)
+Basic example: [`basic.html`](http://britco.github.io/sass-fixed-sticky/demo/basic.html)
 
 ## FAQ
 
