@@ -19,6 +19,8 @@ In your .scss (or .sass) file:
 
 ````
 
+`top` should be equivalent to how far from the top you want the element to be. You can also use the `bottom` property.
+
 And then include the JS file: [`dist/sass-fixed-sticky.js`](./dist/sass-fixed-sticky.js)
 
 ````
