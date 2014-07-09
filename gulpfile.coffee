@@ -15,7 +15,7 @@ footer = require('gulp-footer')
 DIR_ROOT = __dirname
 DIR_BUILD = path.join(__dirname,'./dist')
 DIR_SRC = path.join(__dirname, './src')
-DIR_TEST = path.join(__dirname, './test')
+DIR_DEMO = path.join(__dirname, './demo')
 FILE_FIXED_STICKY_CSS = path.join(__dirname, './bower_components/filament-sticky/fixedsticky.css')
 
 gulp.task 'scripts', ->
@@ -36,8 +36,8 @@ gulp.task 'styles:main', ->
 	gulp.src("#{DIR_SRC}/*.scss")
 	.pipe(gulp.dest(DIR_BUILD))
 
-gulp.task 'styles:test', (callback) ->
-	gulp.src("#{DIR_TEST}/*.scss")
+gulp.task 'styles:demo', (callback) ->
+	gulp.src("#{DIR_DEMO}/*.scss")
 	.pipe(sass(
 		errLogToConsole: true
 		sourceComments: 'normal'
@@ -45,10 +45,10 @@ gulp.task 'styles:test', (callback) ->
 			path.join(__dirname,'./dist/')
 		]
 	))
-	.pipe(gulp.dest(DIR_TEST))
+	.pipe(gulp.dest(DIR_DEMO))
 
 gulp.task 'styles', (callback) ->
-	runSequence('styles:imports', 'styles:main', 'styles:test', callback)
+	runSequence('styles:imports', 'styles:main', 'styles:demo', callback)
 
 gulp.task 'default', ['scripts', 'styles'], ->
 	watch({glob: "#{DIR_SRC}/**/*.coffee"}, ['scripts'])
