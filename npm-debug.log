@@ -1,0 +1,162 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@1.3.14
+3 info using node@v0.10.22
+4 verbose publish [ '.' ]
+5 verbose cache add [ '.', null ]
+6 verbose cache add name=undefined spec="." args=[".",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: '.',
+7 verbose parsed url   path: '.',
+7 verbose parsed url   href: '.' }
+8 silly lockFile 3a52ce78- .
+9 verbose lock . /Users/pauldufour/.npm/3a52ce78-.lock
+10 verbose tar pack [ '/var/folders/f8/5b5xz1m51m5cjp320zfznds00000gn/T/npm-36683-QvnpgloO/1404869522268-0.26762262266129255/tmp.tgz',
+10 verbose tar pack   '.' ]
+11 verbose tarball /var/folders/f8/5b5xz1m51m5cjp320zfznds00000gn/T/npm-36683-QvnpgloO/1404869522268-0.26762262266129255/tmp.tgz
+12 verbose folder .
+13 info prepublish sass-fixed-sticky@0.0.2
+14 silly lockFile 1f1177db-tar tar://.
+15 verbose lock tar://. /Users/pauldufour/.npm/1f1177db-tar.lock
+16 silly lockFile 7a8d34d2-2268-0-26762262266129255-tmp-tgz tar:///var/folders/f8/5b5xz1m51m5cjp320zfznds00000gn/T/npm-36683-QvnpgloO/1404869522268-0.26762262266129255/tmp.tgz
+17 verbose lock tar:///var/folders/f8/5b5xz1m51m5cjp320zfznds00000gn/T/npm-36683-QvnpgloO/1404869522268-0.26762262266129255/tmp.tgz /Users/pauldufour/.npm/7a8d34d2-2268-0-26762262266129255-tmp-tgz.lock
+18 silly lockFile 1f1177db-tar tar://.
+19 silly lockFile 1f1177db-tar tar://.
+20 silly lockFile 7a8d34d2-2268-0-26762262266129255-tmp-tgz tar:///var/folders/f8/5b5xz1m51m5cjp320zfznds00000gn/T/npm-36683-QvnpgloO/1404869522268-0.26762262266129255/tmp.tgz
+21 silly lockFile 7a8d34d2-2268-0-26762262266129255-tmp-tgz tar:///var/folders/f8/5b5xz1m51m5cjp320zfznds00000gn/T/npm-36683-QvnpgloO/1404869522268-0.26762262266129255/tmp.tgz
+22 verbose tar unpack /var/folders/f8/5b5xz1m51m5cjp320zfznds00000gn/T/npm-36683-QvnpgloO/1404869522268-0.26762262266129255/tmp.tgz
+23 silly lockFile 98d1cc0c-2268-0-26762262266129255-package tar:///var/folders/f8/5b5xz1m51m5cjp320zfznds00000gn/T/npm-36683-QvnpgloO/1404869522268-0.26762262266129255/package
+24 verbose lock tar:///var/folders/f8/5b5xz1m51m5cjp320zfznds00000gn/T/npm-36683-QvnpgloO/1404869522268-0.26762262266129255/package /Users/pauldufour/.npm/98d1cc0c-2268-0-26762262266129255-package.lock
+25 silly lockFile 7a8d34d2-2268-0-26762262266129255-tmp-tgz tar:///var/folders/f8/5b5xz1m51m5cjp320zfznds00000gn/T/npm-36683-QvnpgloO/1404869522268-0.26762262266129255/tmp.tgz
+26 verbose lock tar:///var/folders/f8/5b5xz1m51m5cjp320zfznds00000gn/T/npm-36683-QvnpgloO/1404869522268-0.26762262266129255/tmp.tgz /Users/pauldufour/.npm/7a8d34d2-2268-0-26762262266129255-tmp-tgz.lock
+27 silly gunzTarPerm modes [ '755', '644' ]
+28 silly gunzTarPerm extractEntry package.json
+29 silly gunzTarPerm extractEntry .npmignore
+30 silly gunzTarPerm extractEntry README.md
+31 silly gunzTarPerm extractEntry gulpfile.js
+32 silly gunzTarPerm extractEntry dist/sass-fixed-sticky.js
+33 silly gunzTarPerm extractEntry dist/fixedsticky.scss
+34 silly gunzTarPerm extractEntry dist/sass-fixed-sticky.scss
+35 silly gunzTarPerm extractEntry LICENSE.md
+36 silly gunzTarPerm extractEntry test/demo.css
+37 silly gunzTarPerm extractEntry test/demo.html
+38 silly gunzTarPerm extractEntry test/demo.scss
+39 silly gunzTarPerm extractEntry src/sass-fixed-sticky.coffee
+40 silly gunzTarPerm extractEntry src/sass-fixed-sticky.scss
+41 silly gunzTarPerm extractEntry bower.json
+42 silly gunzTarPerm extractEntry gulpfile.coffee
+43 silly lockFile 98d1cc0c-2268-0-26762262266129255-package tar:///var/folders/f8/5b5xz1m51m5cjp320zfznds00000gn/T/npm-36683-QvnpgloO/1404869522268-0.26762262266129255/package
+44 silly lockFile 98d1cc0c-2268-0-26762262266129255-package tar:///var/folders/f8/5b5xz1m51m5cjp320zfznds00000gn/T/npm-36683-QvnpgloO/1404869522268-0.26762262266129255/package
+45 silly lockFile 7a8d34d2-2268-0-26762262266129255-tmp-tgz tar:///var/folders/f8/5b5xz1m51m5cjp320zfznds00000gn/T/npm-36683-QvnpgloO/1404869522268-0.26762262266129255/tmp.tgz
+46 silly lockFile 7a8d34d2-2268-0-26762262266129255-tmp-tgz tar:///var/folders/f8/5b5xz1m51m5cjp320zfznds00000gn/T/npm-36683-QvnpgloO/1404869522268-0.26762262266129255/tmp.tgz
+47 verbose tar pack [ '/Users/pauldufour/.npm/sass-fixed-sticky/0.0.2/package.tgz',
+47 verbose tar pack   '/var/folders/f8/5b5xz1m51m5cjp320zfznds00000gn/T/npm-36683-QvnpgloO/1404869522268-0.26762262266129255/package' ]
+48 verbose tarball /Users/pauldufour/.npm/sass-fixed-sticky/0.0.2/package.tgz
+49 verbose folder /var/folders/f8/5b5xz1m51m5cjp320zfznds00000gn/T/npm-36683-QvnpgloO/1404869522268-0.26762262266129255/package
+50 silly lockFile 98d1cc0c-2268-0-26762262266129255-package tar:///var/folders/f8/5b5xz1m51m5cjp320zfznds00000gn/T/npm-36683-QvnpgloO/1404869522268-0.26762262266129255/package
+51 verbose lock tar:///var/folders/f8/5b5xz1m51m5cjp320zfznds00000gn/T/npm-36683-QvnpgloO/1404869522268-0.26762262266129255/package /Users/pauldufour/.npm/98d1cc0c-2268-0-26762262266129255-package.lock
+52 silly lockFile 47b27090-s-fixed-sticky-0-0-2-package-tgz tar:///Users/pauldufour/.npm/sass-fixed-sticky/0.0.2/package.tgz
+53 verbose lock tar:///Users/pauldufour/.npm/sass-fixed-sticky/0.0.2/package.tgz /Users/pauldufour/.npm/47b27090-s-fixed-sticky-0-0-2-package-tgz.lock
+54 silly lockFile 98d1cc0c-2268-0-26762262266129255-package tar:///var/folders/f8/5b5xz1m51m5cjp320zfznds00000gn/T/npm-36683-QvnpgloO/1404869522268-0.26762262266129255/package
+55 silly lockFile 98d1cc0c-2268-0-26762262266129255-package tar:///var/folders/f8/5b5xz1m51m5cjp320zfznds00000gn/T/npm-36683-QvnpgloO/1404869522268-0.26762262266129255/package
+56 silly lockFile 47b27090-s-fixed-sticky-0-0-2-package-tgz tar:///Users/pauldufour/.npm/sass-fixed-sticky/0.0.2/package.tgz
+57 silly lockFile 47b27090-s-fixed-sticky-0-0-2-package-tgz tar:///Users/pauldufour/.npm/sass-fixed-sticky/0.0.2/package.tgz
+58 silly lockFile 12f19ece--sass-fixed-sticky-0-0-2-package /Users/pauldufour/.npm/sass-fixed-sticky/0.0.2/package
+59 verbose lock /Users/pauldufour/.npm/sass-fixed-sticky/0.0.2/package /Users/pauldufour/.npm/12f19ece--sass-fixed-sticky-0-0-2-package.lock
+60 silly lockFile 12f19ece--sass-fixed-sticky-0-0-2-package /Users/pauldufour/.npm/sass-fixed-sticky/0.0.2/package
+61 silly lockFile 12f19ece--sass-fixed-sticky-0-0-2-package /Users/pauldufour/.npm/sass-fixed-sticky/0.0.2/package
+62 verbose tar unpack /Users/pauldufour/.npm/sass-fixed-sticky/0.0.2/package.tgz
+63 silly lockFile df460833--sass-fixed-sticky-0-0-2-package tar:///Users/pauldufour/.npm/sass-fixed-sticky/0.0.2/package
+64 verbose lock tar:///Users/pauldufour/.npm/sass-fixed-sticky/0.0.2/package /Users/pauldufour/.npm/df460833--sass-fixed-sticky-0-0-2-package.lock
+65 silly lockFile 47b27090-s-fixed-sticky-0-0-2-package-tgz tar:///Users/pauldufour/.npm/sass-fixed-sticky/0.0.2/package.tgz
+66 verbose lock tar:///Users/pauldufour/.npm/sass-fixed-sticky/0.0.2/package.tgz /Users/pauldufour/.npm/47b27090-s-fixed-sticky-0-0-2-package-tgz.lock
+67 silly gunzTarPerm modes [ '755', '644' ]
+68 silly gunzTarPerm extractEntry package.json
+69 silly gunzTarPerm extractEntry .npmignore
+70 silly gunzTarPerm extractEntry README.md
+71 silly gunzTarPerm extractEntry gulpfile.js
+72 silly gunzTarPerm extractEntry LICENSE.md
+73 silly gunzTarPerm extractEntry bower.json
+74 silly gunzTarPerm extractEntry dist/sass-fixed-sticky.js
+75 silly gunzTarPerm extractEntry dist/fixedsticky.scss
+76 silly gunzTarPerm extractEntry dist/sass-fixed-sticky.scss
+77 silly gunzTarPerm extractEntry gulpfile.coffee
+78 silly gunzTarPerm extractEntry src/sass-fixed-sticky.coffee
+79 silly gunzTarPerm extractEntry src/sass-fixed-sticky.scss
+80 silly gunzTarPerm extractEntry test/demo.css
+81 silly gunzTarPerm extractEntry test/demo.html
+82 silly gunzTarPerm extractEntry test/demo.scss
+83 silly lockFile df460833--sass-fixed-sticky-0-0-2-package tar:///Users/pauldufour/.npm/sass-fixed-sticky/0.0.2/package
+84 silly lockFile df460833--sass-fixed-sticky-0-0-2-package tar:///Users/pauldufour/.npm/sass-fixed-sticky/0.0.2/package
+85 silly lockFile 47b27090-s-fixed-sticky-0-0-2-package-tgz tar:///Users/pauldufour/.npm/sass-fixed-sticky/0.0.2/package.tgz
+86 silly lockFile 47b27090-s-fixed-sticky-0-0-2-package-tgz tar:///Users/pauldufour/.npm/sass-fixed-sticky/0.0.2/package.tgz
+87 verbose chmod /Users/pauldufour/.npm/sass-fixed-sticky/0.0.2/package.tgz 644
+88 verbose chown /Users/pauldufour/.npm/sass-fixed-sticky/0.0.2/package.tgz [ 501, 20 ]
+89 silly lockFile 3a52ce78- .
+90 silly lockFile 3a52ce78- .
+91 silly publish { name: 'sass-fixed-sticky',
+91 silly publish   version: '0.0.2',
+91 silly publish   description: 'sass-fixed-sicky',
+91 silly publish   main: 'dist/sass-fixed-sticky.js',
+91 silly publish   directories: { test: 'test' },
+91 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+91 silly publish   repository:
+91 silly publish    { type: 'git',
+91 silly publish      url: 'git://github.com/britco/sass-fixed-sicky.git' },
+91 silly publish   author: '',
+91 silly publish   license: 'MIT',
+91 silly publish   bugs: { url: 'https://github.com/britco/sass-fixed-sicky/issues' },
+91 silly publish   homepage: 'https://github.com/britco/sass-fixed-sicky',
+91 silly publish   devDependencies:
+91 silly publish    { gulp: '~3.8.5',
+91 silly publish      sass: '~0.5.0',
+91 silly publish      'coffee-script': '~1.7.1',
+91 silly publish      'gulp-util': '~2.2.19',
+91 silly publish      'gulp-coffee': '~2.0.1',
+91 silly publish      'gulp-sass': '~0.7.2',
+91 silly publish      'gulp-watch': '~0.6.8',
+91 silly publish      'gulp-replace': '~0.4.0',
+91 silly publish      'js-beautify': '~1.5.1',
+91 silly publish      'gulp-rename': '~1.2.0',
+91 silly publish      'gulp-ext-replace': '~0.1.0',
+91 silly publish      'run-sequence': '~0.3.6' },
+91 silly publish   readme: 'sass-fixed-sicky\n================\n\nSASS library for making elements `position sticky` based on top of https://github.com/filamentgroup/fixed-sticky.\n\n## Installation\n````\nbower install sass-fixed-sicky\n````\n\nIn your .scss (or .sass) file:\n````\n@import "sass-fixed-sticky";\n\n#fixed-element {\n  @include position(sticky);\n  top: 0;\n}\n\n````\n\nAnd then include the JS file: [`dist/sass-fixed-sticky.js`](./dist/sass-fixed-sticky.js)\n\n````\n<script src="sass-fixed-sticky/dist/sass-fixed-sticky.js"></script>\n````\n\nThen you\'re done, all the elements you applied the mixin to will have a \'sticky\' position. You don\'t even need to add any Javascript in your `<head>`.\n\nFor a complete example see [`./test/demo.html`](./test/demo.html). Just make to see the [#development](#development) section first.\n\n## Development\n\n````\nbower install\nnpm install\ngulp watch\n````\n\n\n## Links\n* https://github.com/filamentgroup/fixed-sticky\n* http://updates.html5rocks.com/2012/08/Stick-your-landings-position-sticky-lands-in-WebKit\n\n\n## License\nAvailable under the [MIT License](LICENSE.md).\n',
+91 silly publish   readmeFilename: 'README.md',
+91 silly publish   _id: 'sass-fixed-sticky@0.0.2',
+91 silly publish   dist: { shasum: '95387b43daaf438bce64f27bc2ef8ee43033688d' },
+91 silly publish   _from: '.' }
+92 verbose url raw sass-fixed-sticky
+93 verbose url resolving [ 'https://registry.npmjs.org/', './sass-fixed-sticky' ]
+94 verbose url resolved https://registry.npmjs.org/sass-fixed-sticky
+95 info trying registry request attempt 1 at 18:32:02
+96 http PUT https://registry.npmjs.org/sass-fixed-sticky
+97 http 201 https://registry.npmjs.org/sass-fixed-sticky
+98 verbose url raw sass-fixed-sticky
+99 verbose url resolving [ 'https://registry.npmjs.org/', './sass-fixed-sticky' ]
+100 verbose url resolved https://registry.npmjs.org/sass-fixed-sticky
+101 info trying registry request attempt 1 at 18:32:03
+102 http GET https://registry.npmjs.org/sass-fixed-sticky
+103 http 200 https://registry.npmjs.org/sass-fixed-sticky
+104 error publish fail Cannot publish over existing version.
+104 error publish fail Update the 'version' field in package.json and try again.
+104 error publish fail
+104 error publish fail If the previous version was published in error, see:
+104 error publish fail     npm help unpublish
+104 error publish fail
+104 error publish fail To automatically increment version numbers, see:
+104 error publish fail     npm help version
+105 error System Darwin 13.2.0
+106 error command "node" "/usr/local/bin/npm" "publish"
+107 error cwd /Users/pauldufour/Repositories/sass-fixed-sticky
+108 error node -v v0.10.22
+109 error npm -v 1.3.14
+110 error code EPUBLISHCONFLICT
+111 verbose exit [ 1, true ]

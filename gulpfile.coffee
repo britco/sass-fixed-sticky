@@ -42,7 +42,7 @@ gulp.task 'styles:test', (callback) ->
 gulp.task 'styles', (callback) ->
 	runSequence('styles:imports', 'styles:main', 'styles:test', callback)
 
-gulp.task 'watch', ['scripts', 'styles'], ->
+gulp.task 'default', ['scripts', 'styles'], ->
 	watch({glob: "#{DIR_SRC}/**/*.coffee"}, ['scripts'])
 	watch({glob: "#{DIR_ROOT}/**/*.scss"}, ['styles'])
 
