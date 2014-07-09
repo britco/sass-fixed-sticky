@@ -37,7 +37,7 @@ __Q:__
 Do I need to require the [fixed-sticky library](https://github.com/filamentgroup/fixed-sticky) separately?
 
 __A:__
-No you do not, it is bundled together with sass-fixed-sticky.
+No you do not, it is bundled together with `sass-fixed-sticky`.
 
 ## Development
 
