@@ -45,6 +45,12 @@ npm install
 gulp watch
 ````
 
+## Release
+
+````
+gulp bump
+````
+
 
 ## Links
 * https://github.com/filamentgroup/fixed-sticky
