@@ -4,9 +4,7 @@ sass-fixed-sicky
 SASS library for making elements `position sticky` based on top of https://github.com/filamentgroup/fixed-sticky.
 
 ## Installation
-````
-bower install sass-fixed-sicky
-````
+`bower install sass-fixed-sicky` or `npm install sass-fixed-sicky`
 
 In your .scss (or .sass) file:
 ````
@@ -37,7 +35,7 @@ __Q:__
 Do I need to require the [fixed-sticky library](https://github.com/filamentgroup/fixed-sticky) separately?
 
 __A:__
-No you do not, it is bundled together with sass-fixed-sticky.
+No you do not, it is bundled together with `sass-fixed-sticky`.
 
 ## Development
 
@@ -45,6 +43,12 @@ No you do not, it is bundled together with sass-fixed-sticky.
 bower install
 npm install
 gulp watch
+````
+
+## Release
+
+````
+gulp bump
 ````
 
 

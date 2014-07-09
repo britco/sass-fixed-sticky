@@ -1,7 +1,7 @@
 {
   "name": "sass-fixed-sticky",
   "version": "0.2.7",
-  "description": "sass-fixed-sicky",
+  "description": "sass-fixed-sticky",
   "main": "dist/sass-fixed-sticky.js",
   "directories": {
     "test": "test"
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/britco/sass-fixed-sicky.git"
+    "url": "git://github.com/britco/sass-fixed-sticky.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/britco/sass-fixed-sicky/issues"
+    "url": "https://github.com/britco/sass-fixed-sticky/issues"
   },
-  "homepage": "https://github.com/britco/sass-fixed-sicky",
+  "homepage": "https://github.com/britco/sass-fixed-sticky",
   "browserify": {
     "transform": [
       "coffeeify",
