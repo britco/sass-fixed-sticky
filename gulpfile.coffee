@@ -63,22 +63,35 @@ gulp.task 'bump', ->
 	.pipe(bump({type:'patch'}))
 	.pipe(gulp.dest('./'));
 
+pages_contents_ignore = null
 gulp.task 'pages', (callback) ->
+	runSequence('pages:before', 'pages:main', 'pages:after', callback)
+
+gulp.task 'pages:before', ->
 	# Temporarily remove bower_components from gitignore
-	contents_ignore = fs.readFileSync(FILE_GITIGNORE).toString()
+	pages_contents_ignore = fs.readFileSync(FILE_GITIGNORE).toString()
+
 	fs.writeFileSync(
 		FILE_GITIGNORE,
-		contents_ignore.replace('bower_components','#bower_components')
+		pages_contents_ignore.replace("bower_components\n",'')
 	)
 
+gulp.task 'pages:main', ->
+	# Deploy pages
 	gulp.src([
-		'./bower_components/**/*',
-		'./demo/**/*',
-		'./dist/**/*'
-	])
+		'./.gitignore',
+		'./README.md',
+		'./LICENSE.md'
+		'./bower_components/jquery/dist/jquery.js',
+		'./dist/*',
+		'./demo/*'
+	], cwdbase: true)
 	.pipe(pages())
-	.on('end', ->
-		# Revert gitignore
-		fs.writeFileSync(FILE_GITIGNORE,contents_ignore)
-		callback()
+	.on('error',gutil.log)
+
+gulp.task 'pages:after', ->
+	# Revert changes to gitignore
+	fs.writeFileSync(
+		FILE_GITIGNORE,
+		pages_contents_ignore
 	)
