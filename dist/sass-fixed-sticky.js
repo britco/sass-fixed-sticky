@@ -37,9 +37,12 @@
     animationNameMatch = 'sass-fixed-sticky-animation';
     if ((animationName === animationNameMatch) && !$(e.target).hasClass('fixedsticky')) {
       $el = $(e.target);
-      $el.removeClass('fixedsticky-deactivated');
-      $el.addClass('fixedsticky');
-      $el.fixedsticky();
+      if ($el.hasClass('fixedsticky-deactivated')) {
+
+      } else {
+        $el.fixedsticky();
+      }
+      $el.removeClass('fixedsticky-deactivated').addClass('fixedsticky');
       $(window).on('resize scroll', onResize = function() {
         if (!$el.hasClass('fixedsticky-deactivated') && $el.css('animation-name') !== animationNameMatch) {
           $el.addClass('fixedsticky-deactivated');

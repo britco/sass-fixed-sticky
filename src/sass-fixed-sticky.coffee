@@ -47,10 +47,14 @@
 		if(animationName == animationNameMatch) and !$(e.target).hasClass('fixedsticky')
 			$el = $(e.target)
 
-			# Activate
-			$el.removeClass('fixedsticky-deactivated')
-			$el.addClass('fixedsticky')
-			$el.fixedsticky()
+			# Activate..
+			if $el.hasClass('fixedsticky-deactivated')
+				# Pass.. don't need to re-init if it was initialized before but then
+				# deactivated
+			else
+				$el.fixedsticky()
+
+			$el.removeClass('fixedsticky-deactivated').addClass('fixedsticky')
 
 			$(window).on 'resize scroll', onResize = ->
 				# De-activate
