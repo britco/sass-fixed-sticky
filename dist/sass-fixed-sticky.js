@@ -1,13 +1,14 @@
 (function(root, factory) {
   if (typeof exports === "object") {
-    module.exports = factory();
+    module.exports = factory(global.FixedSticky);
   } else {
-    factory();
+    factory(root.FixedSticky);
   }
-})(this, function() {
+})(this, function(FixedSticky) {
 
   /* Module */
-  var wrap, _slice;
+  var S, wrap, _slice;
+  S = FixedSticky;
   FixedSticky.tests.sticky = false;
   if (window.requestAnimationFrame != null) {
     _slice = Array.prototype.slice;
@@ -21,19 +22,34 @@
         window.requestAnimationFrame((function(_this) {
           return function() {
             FixedSticky._ticking = false;
-            return fn.call(_this, el);
+            if (!$(el).hasClass('fixedsticky-deactivated')) {
+              return fn.call(_this, el);
+            }
           };
         })(this));
       }
       FixedSticky._ticking = true;
     });
   }
-  $(document).bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(e) {
-    var animationName;
+  return $(document).on("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(e) {
+    var $el, animationName, animationNameMatch, onResize;
     animationName = e.originalEvent.animationName.trim();
-    if ((animationName === 'sass-fixed-sticky-animation') && !$(e.target).hasClass('fixedsticky')) {
-      $(e.target).addClass('fixedsticky');
-      return $(e.target).fixedsticky();
+    animationNameMatch = 'sass-fixed-sticky-animation';
+    if ((animationName === animationNameMatch) && !$(e.target).hasClass('fixedsticky')) {
+      $el = $(e.target);
+      $el.removeClass('fixedsticky-deactivated');
+      $el.addClass('fixedsticky');
+      $el.fixedsticky();
+      $(window).on('resize scroll', onResize = function() {
+        if (!$el.hasClass('fixedsticky-deactivated') && $el.css('animation-name') !== animationNameMatch) {
+          $el.addClass('fixedsticky-deactivated');
+          $(document).off('resize scroll', onResize);
+          $el.each(function() {
+            return $(this).removeData([S.keys.offset, S.keys.position]).removeClass(S.classes.active || '').removeClass(S.classes.inactive || '');
+          });
+          $el.removeClass('fixedsticky');
+        }
+      });
     }
   });
 });
