@@ -4,8 +4,8 @@
 		# environments that support module.exports, like Node.
 		module.exports = factory(global.FixedSticky)
 	else
-    # Browser globals (root is window)
-    factory(root.FixedSticky)
+		# Browser globals (root is window)
+		factory(root.FixedSticky)
 
 	return
 ) this, (FixedSticky) ->
