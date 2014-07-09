@@ -31,6 +31,14 @@ Then you're done, all the elements you applied the mixin to will have a 'sticky'
 
 For a complete example see [`./test/demo.html`](./test/demo.html). Just make to see the [#development](#development) section first.
 
+## FAQ
+
+__Q:__
+Do I need to require the [fixed-sticky library](https://github.com/filamentgroup/fixed-sticky) separately?
+
+__A:__
+No you do not, it is bundled together with sass-fixed-sticky.
+
 ## Development
 
 ````

@@ -1,6 +1,6 @@
 {
   "name": "sass-fixed-sticky",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "description": "sass-fixed-sicky",
   "main": "dist/sass-fixed-sticky.js",
   "directories": {
@@ -19,6 +19,16 @@
     "url": "https://github.com/britco/sass-fixed-sicky/issues"
   },
   "homepage": "https://github.com/britco/sass-fixed-sicky",
+  "browserify": {
+    "transform": [
+      "coffeeify",
+      "debowerify",
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "./bower_components/filament-sticky/fixedsticky.js": "FixedSticky"
+  },
   "devDependencies": {
     "gulp": "~3.8.5",
     "sass": "~0.5.0",
@@ -32,6 +42,12 @@
     "gulp-rename": "~1.2.0",
     "gulp-ext-replace": "~0.1.0",
     "run-sequence": "~0.3.6",
-    "gulp-bump": "~0.1.10"
+    "gulp-bump": "~0.1.10",
+    "browserify": "~4.2.0",
+    "coffeeify": "~0.6.0",
+    "debowerify": "~0.8.1",
+    "vinyl-source-stream": "~0.1.1",
+    "gulp-footer": "~1.0.5",
+    "browserify-shim": "~3.6.0"
   }
 }

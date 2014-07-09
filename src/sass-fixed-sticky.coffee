@@ -2,49 +2,18 @@
 	if typeof exports is "object"
 		# Node. Does not work with strict CommonJS, but only CommonJS-like
 		# environments that support module.exports, like Node.
-		module.exports = factory(global.FixedSticky)
+		module.exports = factory()
 	else
 		# Browser globals (root is window)
-		factory(root.FixedSticky)
+		factory()
 
 	return
-) this, (FixedSticky) ->
-	### RAF polyfill ###
-	unless Date.now
-	  Date.now = ->
-	    new Date().getTime()
-	(->
-	  "use strict"
-	  vendors = [
-	    "webkit"
-	    "moz"
-	  ]
-	  i = 0
+) this, ->
+	require('./requestanimationframe')
 
-	  while i < vendors.length and not window.requestAnimationFrame
-	    vp = vendors[i]
-	    window.requestAnimationFrame = window[vp + "RequestAnimationFrame"]
-	    window.cancelAnimationFrame = (window[vp + "CancelAnimationFrame"] or window[vp + "CancelRequestAnimationFrame"])
-	    ++i
-	  # iOS6 is buggy
-	  if /iP(ad|hone|od).*OS 6/.test(window.navigator.userAgent) or not window.requestAnimationFrame or not window.cancelAnimationFrame
-	    lastTime = 0
-	    window.requestAnimationFrame = (callback) ->
-	      now = Date.now()
-	      nextTime = Math.max(lastTime + 16, now)
-	      setTimeout (->
-	        callback lastTime = nextTime
-	        return
-	      ), nextTime - now
-
-	    window.cancelAnimationFrame = clearTimeout
-	  return
-	)()
-
-	### Module ###
-
-	# Same alias as library
-	S = FixedSticky
+	# Include FixedSticky, using same "S" alias as library, so copy
+	# pasted code works
+	S = FixedSticky = require('filament-sticky')
 
 	# Use polyfill until native support isn't buggy
 	FixedSticky.tests.sticky = false

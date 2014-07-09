@@ -1,13 +1,16 @@
 path = require('path')
 fs = require('fs')
+browserify = require('browserify')
 gulp = require('gulp')
 coffee = require('gulp-coffee')
 sass = require('gulp-sass')
 gutil = require('gulp-util')
 watch = require('gulp-watch')
+source = require('vinyl-source-stream')
 extReplace = require('gulp-ext-replace')
 runSequence = require('run-sequence')
 bump = require('gulp-bump')
+footer = require('gulp-footer')
 
 DIR_ROOT = __dirname
 DIR_BUILD = path.join(__dirname,'./dist')
@@ -16,8 +19,12 @@ DIR_TEST = path.join(__dirname, './test')
 FILE_FIXED_STICKY_CSS = path.join(__dirname, './bower_components/filament-sticky/fixedsticky.css')
 
 gulp.task 'scripts', ->
-	gulp.src("#{DIR_SRC}/*.coffee")
-	.pipe(coffee({bare: true})).on('error', gutil.log)
+	bundle = browserify({
+		entries: ["#{DIR_SRC}/sass-fixed-sticky.coffee"]
+	}).bundle({standalone: 'sassFixedSticky'})
+
+	bundle
+	.pipe(source('sass-fixed-sticky.js'))
 	.pipe(gulp.dest(DIR_BUILD))
 
 gulp.task 'styles:imports', ->
