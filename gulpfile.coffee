@@ -7,6 +7,7 @@ gutil = require('gulp-util')
 watch = require('gulp-watch')
 extReplace = require('gulp-ext-replace')
 runSequence = require('run-sequence')
+bump = require('gulp-bump')
 
 DIR_ROOT = __dirname
 DIR_BUILD = path.join(__dirname,'./dist')
@@ -16,7 +17,7 @@ FILE_FIXED_STICKY_CSS = path.join(__dirname, './bower_components/filament-sticky
 
 gulp.task 'scripts', ->
 	gulp.src("#{DIR_SRC}/*.coffee")
-	.pipe(coffee({bare: false})).on('error', gutil.log)
+	.pipe(coffee({bare: true})).on('error', gutil.log)
 	.pipe(gulp.dest(DIR_BUILD))
 
 gulp.task 'styles:imports', ->
@@ -47,3 +48,8 @@ gulp.task 'default', ['scripts', 'styles'], ->
 	watch({glob: "#{DIR_ROOT}/**/*.scss"}, ['styles'])
 
 gulp.task 'build', ['scripts', 'styles']
+
+gulp.task 'bump', ->
+	gulp.src(['./bower.json', './package.json'])
+	.pipe(bump({type:'patch'}))
+	.pipe(gulp.dest('./'));

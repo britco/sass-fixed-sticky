@@ -1,6 +1,6 @@
 {
   "name": "sass-fixed-sticky",
-  "version": "0.0.2",
+  "version": "0.2.2",
   "description": "sass-fixed-sicky",
   "main": "dist/sass-fixed-sticky.js",
   "directories": {
@@ -31,6 +31,7 @@
     "js-beautify": "~1.5.1",
     "gulp-rename": "~1.2.0",
     "gulp-ext-replace": "~0.1.0",
-    "run-sequence": "~0.3.6"
+    "run-sequence": "~0.3.6",
+    "gulp-bump": "~0.1.10"
   }
 }
