@@ -27,7 +27,11 @@ And then include the JS file: [`dist/sass-fixed-sticky.js`](./dist/sass-fixed-st
 
 Then you're done, all the elements you applied the mixin to will have a 'sticky' position. You don't even need to add any Javascript in your `<head>`.
 
-For a complete example see [`./test/demo.html`](./test/demo.html). Just make to see the [#development](#development) section first.
+For a complete example see [#demos](#demos).
+
+## Demos
+
+Basic example: [`basic.html`](http://britco.github.io/sass-fixed-sticky/demo/basic.html)
 
 ## FAQ
 
