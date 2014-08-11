@@ -3,7 +3,8 @@ sass-fixed-sicky
 
 Easy "sticky position" elements.
 
-![](http://i.imgur.com/VGNzIyy.gif)
+![](http://i.imgur.com/HJnA2M6.gif)
+
 
 ## Installation
 `bower install sass-fixed-sicky` or `npm install sass-fixed-sicky`
