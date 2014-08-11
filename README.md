@@ -53,6 +53,7 @@ gulp watch
 
 ````
 gulp bump
+git tag -a 0.1.7 -m "0.1.7"
 ````
 
 
