@@ -3,7 +3,7 @@ sass-fixed-sicky
 
 Easy "sticky position" elements. These are elements that are positioned normally most of the time, but as you scroll past them, they become "fixed position".
 
-![](http://i.imgur.com/HJnA2M6.gif)
+![](http://i.imgur.com/tB1UrtQ.gif)
 
 
 ## Installation
