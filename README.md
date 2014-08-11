@@ -1,7 +1,9 @@
 sass-fixed-sicky
 ================
 
-SASS library for making elements `position sticky` based on top of https://github.com/filamentgroup/fixed-sticky.
+Easy "sticky position" elements.
+
+![](http://i.imgur.com/BCHWDSP.png)
 
 ## Installation
 `bower install sass-fixed-sicky` or `npm install sass-fixed-sicky`
