@@ -1,7 +1,7 @@
 sass-fixed-sicky
 ================
 
-Easy "sticky position" elements. These are elements that are positioned normally most of the time, but as you scroll past them, they become "fixed position".
+Easy "sticky position" elements. These are elements that are positioned normally until you scroll past the top boundary of the element, then it becomes "fixed position".
 
 ![](http://i.imgur.com/tB1UrtQ.gif)
 
