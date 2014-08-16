@@ -48,13 +48,19 @@
 			$el = $(e.target)
 
 			# Activate..
-			if $el.hasClass('fixedsticky-deactivated')
-				# Pass.. don't need to re-init if it was initialized before but then
-				# deactivated
-			else
-				$el.fixedsticky()
+			window.requestAnimationFrame ->
+				reactivate = false
+				if $el.hasClass('fixedsticky-deactivated')
+					# Pass.. don't need to re-init if it was initialized before but then
+					# deactivated
+					reactivate = true
+				else
+					$el.fixedsticky()
 
-			$el.removeClass('fixedsticky-deactivated').addClass('fixedsticky')
+				# Always add the sticky class on activation.. regardless of whether the
+				# element was deactivated before..
+				$el.removeClass('fixedsticky-deactivated').addClass('fixedsticky')
+				if reactivate then FixedSticky.update($el)
 
 			$(window).on 'resize scroll', onResize = ->
 				# De-activate

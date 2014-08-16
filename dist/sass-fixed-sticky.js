@@ -233,12 +233,21 @@ if (!Date.now)
     animationNameMatch = 'sass-fixed-sticky-animation';
     if ((animationName === animationNameMatch) && !$(e.target).hasClass('fixedsticky')) {
       $el = $(e.target);
-      if ($el.hasClass('fixedsticky-deactivated')) {
-
-      } else {
-        $el.fixedsticky();
-      }
-      $el.removeClass('fixedsticky-deactivated').addClass('fixedsticky');
+      window.requestAnimationFrame(function() {
+        var reactivate;
+        reactivate = false;
+        if ($el.hasClass('fixedsticky-deactivated')) {
+          reactivate = true;
+        } else {
+          window.requestAnimationFrame(function() {
+            return $el.fixedsticky();
+          });
+        }
+        $el.removeClass('fixedsticky-deactivated').addClass('fixedsticky');
+        if (reactivate) {
+          return FixedSticky.update($el);
+        }
+      });
       $(window).on('resize scroll', onResize = function() {
         if (!FixedSticky._tickingDeactivate) {
           window.requestAnimationFrame(function() {
