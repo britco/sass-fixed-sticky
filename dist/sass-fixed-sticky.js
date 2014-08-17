@@ -204,7 +204,7 @@ if (!Date.now)
     factory();
   }
 })(this, function() {
-  var FixedSticky, S, wrap, _slice;
+  var FixedSticky, S, animationEvents, wrap, _slice;
   _dereq_('./requestanimationframe');
   S = FixedSticky = _dereq_("./../bower_components/filament-sticky/fixedsticky.js");
   FixedSticky.tests.sticky = false;
@@ -227,18 +227,27 @@ if (!Date.now)
     }
     FixedSticky._tickingUpdate = true;
   });
-  return $(document).on("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(e) {
+  animationEvents = ["animationstart", "webkitAnimationStart", "oAnimationStart", "MSAnimationStart", "animationiteration", "webkitAnimationIteration", "MSAnimationIteration"].join(' ');
+  return $(document).on(animationEvents, function(e) {
     var $el, animationName, animationNameMatch, onResize;
     animationName = e.originalEvent.animationName.trim();
     animationNameMatch = 'sass-fixed-sticky-animation';
     if ((animationName === animationNameMatch) && !$(e.target).hasClass('fixedsticky')) {
       $el = $(e.target);
-      if ($el.hasClass('fixedsticky-deactivated')) {
-
-      } else {
-        $el.fixedsticky();
-      }
-      $el.removeClass('fixedsticky-deactivated').addClass('fixedsticky');
+      $el.addClass('sass-fixed-sticky-animation-stopped');
+      window.requestAnimationFrame(function() {
+        var reactivate;
+        reactivate = false;
+        if ($el.hasClass('fixedsticky-deactivated')) {
+          reactivate = true;
+        } else {
+          $el.fixedsticky();
+        }
+        $el.removeClass('fixedsticky-deactivated').addClass('fixedsticky');
+        if (reactivate) {
+          return FixedSticky.update($el);
+        }
+      });
       $(window).on('resize scroll', onResize = function() {
         if (!FixedSticky._tickingDeactivate) {
           window.requestAnimationFrame(function() {

@@ -6,5 +6,6 @@
 @-ms-keyframes sass-fixed-sticky-animation{from,to{counter-reset:""}}
 @keyframes sass-fixed-sticky-animation{from,to{counter-reset:""}}
 #container{height:9000px;padding:300px 0}
-#fixme{width:200px;height:200px;background:orange;color:purple;top:0;animation-duration:.001s;animation-name:sass-fixed-sticky-animation;-webkit-animation-duration:.001s;-webkit-animation-name:sass-fixed-sticky-animation}
+#fixme{width:200px;height:200px;background:orange;color:purple;top:0;animation-duration:60ms;animation-name:sass-fixed-sticky-animation;-webkit-animation-duration:60ms;-webkit-animation-name:sass-fixed-sticky-animation;animation-iteration-count:100}
+#fixme.sass-fixed-sticky-animation-stopped{-webkit-animation-play-state:paused;-moz-animation-play-state:paused;-o-animation-play-state:paused;animation-play-state:paused}
 #dontfixme{display:inline;position:relative}
