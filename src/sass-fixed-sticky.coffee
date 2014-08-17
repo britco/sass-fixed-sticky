@@ -40,21 +40,40 @@
 		return
 
 	# Activate fixed-sticky when the element is animated in
-	$(document).on "animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", (e) ->
+	animationEvents = [
+		"animationstart"
+		"webkitAnimationStart"
+		"oAnimationStart"
+		"MSAnimationStart"
+		"animationiteration"
+		"webkitAnimationIteration"
+		"MSAnimationIteration"
+	].join(' ')
+
+	$(document).on animationEvents, (e) ->
 		animationName = e.originalEvent.animationName.trim()
 		animationNameMatch = 'sass-fixed-sticky-animation'
 
 		if(animationName == animationNameMatch) and !$(e.target).hasClass('fixedsticky')
 			$el = $(e.target)
 
-			# Activate..
-			if $el.hasClass('fixedsticky-deactivated')
-				# Pass.. don't need to re-init if it was initialized before but then
-				# deactivated
-			else
-				$el.fixedsticky()
+			# Don't need to check for any more animations on this element
+			$el.addClass('sass-fixed-sticky-animation-stopped')
 
-			$el.removeClass('fixedsticky-deactivated').addClass('fixedsticky')
+			# Activate..
+			window.requestAnimationFrame ->
+				reactivate = false
+				if $el.hasClass('fixedsticky-deactivated')
+					# Pass.. don't need to re-init if it was initialized before but then
+					# deactivated
+					reactivate = true
+				else
+					$el.fixedsticky()
+
+				# Always add the sticky class on activation.. regardless of whether the
+				# element was deactivated before..
+				$el.removeClass('fixedsticky-deactivated').addClass('fixedsticky')
+				if reactivate then FixedSticky.update($el)
 
 			$(window).on 'resize scroll', onResize = ->
 				# De-activate
